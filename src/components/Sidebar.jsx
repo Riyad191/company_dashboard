@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "../App.css";
-import Logo from "../images/walmart-logo.png";
 import { FaTh, FaBars, FaRegChartBar } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 
@@ -24,9 +23,10 @@ const Sidebar = ({ children }) => {
     <div className="container">
       <div style={{ width: isOpen ? "200px" : "50px" }} className="sidebar">
         <div className="top_section">
-          <h1 style={{ display: isOpen ? "block" : "none" }} className="logo">
-            {/* <img src={Logo} alt="walmart logo" height={80} /> */}
-          </h1>
+          <h1
+            style={{ display: isOpen ? "block" : "none" }}
+            className="logo"
+          ></h1>
           <div style={{ marginLeft: isOpen ? "50px" : "0px" }} className="bars">
             <FaBars onClick={toggle} />
           </div>
