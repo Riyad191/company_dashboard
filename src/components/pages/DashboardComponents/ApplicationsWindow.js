@@ -32,4 +32,5 @@ const ApplicationsWindow = ({ item }) => {
     </div>
   );
 };
+
 export default ApplicationsWindow;

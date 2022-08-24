@@ -1,5 +1,5 @@
 import React from "react";
-import PillarsWindow from "./components/PillarsWindow";
+import PillarsWindow from "./DashboardComponents/PillarsWindow";
 import "./Dashboard.css";
 
 const Dashboard = () => {

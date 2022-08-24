@@ -10,22 +10,22 @@ const Sidebar = ({ children }) => {
   const menuItem = [
     {
       path: "/",
-      name: "Dashboard",
+      name: "Tools",
       icon: <FaTh />,
     },
 
-    {
-      path: "/analytics",
-      name: "Analytics",
-      icon: <FaRegChartBar />,
-    },
+    // {
+    //   path: "/analytics",
+    //   name: "Analytics",
+    //   icon: <FaRegChartBar />,
+    // },
   ];
   return (
     <div className="container">
       <div style={{ width: isOpen ? "200px" : "50px" }} className="sidebar">
         <div className="top_section">
           <h1 style={{ display: isOpen ? "block" : "none" }} className="logo">
-            <img src={Logo} alt="walmart logo" height={80} />
+            {/* <img src={Logo} alt="walmart logo" height={80} /> */}
           </h1>
           <div style={{ marginLeft: isOpen ? "50px" : "0px" }} className="bars">
             <FaBars onClick={toggle} />
@@ -43,7 +43,13 @@ const Sidebar = ({ children }) => {
           </NavLink>
         ))}
       </div>
-      <main>{children}</main>
+      <main>
+        <p className="dashboard_title">
+          {" "}
+          <span className="OSCS">OSCS</span> Omni Supply Chain System
+        </p>
+        {children}
+      </main>
     </div>
   );
 };

@@ -4,10 +4,20 @@
   text-decoration: none;
   box-sizing: border-box;
 }
+.dashboard_title {
+  color: rgb(122, 209, 211);
+  font-size: 20px;
+  font-weight: inherit;
+}
 .container {
   display: flex;
   background: rgb(23, 27, 72);
+  /* background: rgb(129, 137, 224); */
   height: 100vh;
+}
+.OSCS {
+  font-size: 20px;
+  font-weight: bold;
 }
 main {
   width: 100%;
@@ -44,12 +54,14 @@ img {
   transition: all 0.5s;
 }
 .link:hover {
-  background: lightskyblue;
+  /* background: rgb(122, 211, 153); */
+  background: rgb(122, 209, 211);
   color: #000;
   transition: all 0.5s;
 }
 .active {
-  background: lightskyblue;
+  background: rgb(122, 209, 211);
+  /* background: rgb(122, 211, 153); */
   color: #000;
 }
 .icon,
