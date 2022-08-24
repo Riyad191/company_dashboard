@@ -4,10 +4,11 @@ import Products from "./Products";
 import data from "../../data";
 import ProductsCounter from "./ProductsCounter";
 
-const uniquePillar = [...new Set(data.map((item) => item.pillar))];
-const Top = () => {
+const uniquePillarName = [...new Set(data.map((item) => item.pillar))];
+
+const PillarsWindow = () => {
   const [allProducts, setAllProducts] = useState(data);
-  const [pillars, setPillars] = useState(uniquePillar);
+  const [pillars, setPillars] = useState(uniquePillarName);
   const [show, setShow] = useState(false);
   const filterProducts = (i) => {
     const newProducts = data.filter((item) => item.pillar === i);
@@ -37,4 +38,4 @@ const Top = () => {
   );
 };
 
-export default Top;
+export default PillarsWindow;

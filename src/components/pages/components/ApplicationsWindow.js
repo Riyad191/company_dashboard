@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { IoIosArrowForward, IoIosArrowDown } from "react-icons/io";
 import ToolsWindow from "./ToolsWindow";
 
-const Bottom = ({ item }) => {
+const ApplicationsWindow = ({ item }) => {
   const [isActive, setIsActive] = useState(false);
   const [tools, setTools] = useState(false);
   return (
@@ -32,4 +32,4 @@ const Bottom = ({ item }) => {
     </div>
   );
 };
-export default Bottom;
+export default ApplicationsWindow;

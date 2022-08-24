@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import Bottom from "./ApplicationsWindow";
+import ApplicationsWindow from "./ApplicationsWindow";
 import ProductsInputSearch from "./ProductsInputSearch";
+
 const Products = ({ allProducts, show }) => {
   const [showApplication, setShowApplication] = useState(false);
   const [search, setSearch] = useState("");
   const [allApplications, setAllApplications] = useState(
     allProducts.map((a) => a.product).flat()
-    // nested array and map creates new array
   );
 
   const filterApplicatoins = (i) => {
@@ -18,7 +18,9 @@ const Products = ({ allProducts, show }) => {
     setShowApplication(true);
   };
 
-  const product = allProducts.map((a) => a.product.map((a) => a.name));
+  const product = allProducts.map((item) =>
+    item.product.map((item) => item.name)
+  );
   const filtered = product
     .flat()
     .filter((item) => item.toLowerCase().indexOf(search.toLowerCase()) !== -1);
@@ -38,19 +40,16 @@ const Products = ({ allProducts, show }) => {
           );
         })}
       </div>
-      {/* allApplications data won't work once propped  */}
-      {/* <Bottom allApplications={allApplications} /> */}
       {allApplications.map(
         (item) =>
           showApplication && (
             <div className="acc">
               {item.applications.map((item) => (
-                <Bottom item={item} show={show} />
+                <ApplicationsWindow item={item} show={show} />
               ))}
             </div>
           )
       )}
-      {/* how to manage this in bottom box */}
     </div>
   );
 };
