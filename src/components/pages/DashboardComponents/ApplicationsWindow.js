@@ -1,8 +1,14 @@
 import React, { useState } from "react";
 import { IoIosArrowForward, IoIosArrowDown } from "react-icons/io";
+import { useSelector } from "react-redux";
 import ToolsWindow from "./ToolsWindow";
 
 const ApplicationsWindow = ({ item }) => {
+  const allApplications = useSelector((state) => state.applications);
+  console.log(
+    "🚀 ~ file: ApplicationsWindow.js ~ line 8 ~ ApplicationsWindow ~ allApplications",
+    allApplications
+  );
   const [isActive, setIsActive] = useState(false);
   const [tools, setTools] = useState(false);
   return (

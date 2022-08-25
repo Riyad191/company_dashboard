@@ -5,14 +5,17 @@ export default [
       {
         name: "Supply Chain Operations Tool (GSCOPE) ",
         applications: [
+          { name: "application1", tools: ["tool1", "tool2", "tool3"] },
+          { name: "application2", tools: ["tool1", "tool2", "tool3"] },
+          { name: "application33", tools: ["tool1", "tool2", "tool3"] },
           { name: "application", tools: ["tool1", "tool2", "tool3"] },
           { name: "application", tools: ["tool1", "tool2", "tool3"] },
           { name: "application", tools: ["tool1", "tool2", "tool3"] },
           { name: "application", tools: ["tool1", "tool2", "tool3"] },
-          { name: "application", tools: ["tool1", "tool2", "tool3"] },
-          { name: "application", tools: ["tool1", "tool2", "tool3"] },
-          { name: "application", tools: ["tool1", "tool2", "tool3"] },
-          { name: "application", tools: ["tool1", "tool2", "tool3"] },
+          {
+            name: "application",
+            tools: [{ tool1: [1, 2, 3] }, "tool2", "tool3"],
+          },
         ],
       },
       {
@@ -20,7 +23,7 @@ export default [
         applications: [
           { name: "application", tools: ["tool1", "tool2", "tool3"] },
           { name: "application", tools: ["tool1", "tool2", "tool3"] },
-          { name: "application", tools: ["tool1", "tool2", "tool3"] },
+          { name: "application44", tools: ["tool1", "tool2", "tool3"] },
           { name: "application", tools: ["tool1", "tool2", "tool3"] },
           { name: "application", tools: ["tool1", "tool2", "tool3"] },
           { name: "application", tools: ["tool1", "tool2", "tool3"] },
@@ -34,7 +37,7 @@ export default [
         applications: [
           { name: "application", tools: ["tool1", "tool2", "tool3"] },
           { name: "application", tools: ["tool1", "tool2", "tool3"] },
-          { name: "application", tools: ["tool1", "tool2", "tool3"] },
+          { name: "application55", tools: ["tool1", "tool2", "tool3"] },
           { name: "application", tools: ["tool1", "tool2", "tool3"] },
           { name: "application", tools: ["tool1", "tool2", "tool3"] },
           { name: "application", tools: ["tool1", "tool2", "tool3"] },
@@ -47,7 +50,7 @@ export default [
         applications: [
           { name: "application", tools: ["tool1", "tool2", "tool3"] },
           { name: "application", tools: ["tool1", "tool2", "tool3"] },
-          { name: "application", tools: ["tool1", "tool2", "tool3"] },
+          { name: "application66", tools: ["tool1", "tool2", "tool3"] },
           { name: "application", tools: ["tool1", "tool2", "tool3"] },
           { name: "application", tools: ["tool1", "tool2", "tool3"] },
           { name: "application", tools: ["tool1", "tool2", "tool3"] },

@@ -1,20 +1,22 @@
 import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { setApplications } from "../redux";
 import ApplicationsWindow from "./ApplicationsWindow";
 import ProductsInputSearch from "./ProductsInputSearch";
 
-const Products = ({ allProducts, show }) => {
+const Products = ({ show }) => {
+  const dispatch = useDispatch();
+  const allProducts = useSelector((state) => state.products);
+  const applications = useSelector((state) => state.applications);
   const [showApplication, setShowApplication] = useState(false);
   const [search, setSearch] = useState("");
-  const [allApplications, setAllApplications] = useState(
-    allProducts.map((a) => a.product).flat()
-  );
 
   const filterApplicatoins = (i) => {
     const newApplications = allProducts
-      .map((a) => a.product)
+      ?.map((a) => a.product)
       .flat()
       .filter((item) => item.name === i);
-    setAllApplications(newApplications);
+    dispatch(setApplications(newApplications));
     setShowApplication(true);
   };
 
@@ -40,7 +42,7 @@ const Products = ({ allProducts, show }) => {
           );
         })}
       </div>
-      {allApplications.map(
+      {applications.map(
         (item) =>
           showApplication && (
             <div className="acc">

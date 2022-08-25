@@ -1,18 +1,49 @@
 import { createStore } from "redux";
 
-const STACK = "STACK";
+const SET_PRODUCTS = "SET_PRODUCTS";
+const SET_APPLICATIONS = "SET_APPLICATIONS";
+const SET_TOOLS = "SET_TOOLS";
 
-function setStack(stack) {
+export function setProducts(products) {
   return {
-    type: STACK,
-    stack,
+    type: SET_PRODUCTS,
+    payload: products,
   };
 }
 
-function stacks(state = {}, action) {
+export function setApplications(apps) {
+  return {
+    type: SET_APPLICATIONS,
+    payload: apps,
+  };
+}
+
+export function setTools(tools) {
+  return {
+    type: SET_TOOLS,
+    payload: tools,
+  };
+}
+
+const INIT_STATE = {
+  // path: ["fulfillment", "fc system"],
+  products: [],
+  applications: [],
+  tools: [],
+  // data: data,
+};
+
+function stacks(state = INIT_STATE, action) {
   switch (action.type) {
-    case STACK:
-      return [...state, { ...action.stack }];
+    case SET_PRODUCTS:
+      return { ...state, products: action.payload };
+
+    case SET_APPLICATIONS:
+      return { ...state, applications: action.payload };
+
+    case SET_TOOLS:
+      return { ...state, tools: action.payload };
+
     default:
       return state;
   }
