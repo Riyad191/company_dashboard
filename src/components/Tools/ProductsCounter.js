@@ -3,7 +3,7 @@ import data from "../../data";
 const ProductsCounter = () => {
   const [countProducts, setCountProducts] = useState(data);
   return (
-    <div className="products_counter_list">
+    <main className="products_counter_list">
       {countProducts
         .map((item) => {
           return item.product;
@@ -17,7 +17,7 @@ const ProductsCounter = () => {
             <span className="counter_number">{item}</span>
           </p>
         ))}
-    </div>
+    </main>
   );
 };
 export default ProductsCounter;

@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import App from "./App";
-import store from "./components/pages/redux";
+import store from "./redux";
 // import Practice from "./practice";
 // import Practice2 from "./practice2";
 

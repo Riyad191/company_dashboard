@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "../App.css";
-import Logo from "../images/walmart-logo.png";
+import "../../App.css";
+import Logo from "../../images/walmart-logo.png";
 import { FaTh, FaBars, FaRegChartBar } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 
