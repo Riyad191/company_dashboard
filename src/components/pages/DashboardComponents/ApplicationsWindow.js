@@ -1,16 +1,33 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { IoIosArrowForward, IoIosArrowDown } from "react-icons/io";
-import { useSelector } from "react-redux";
-import ToolsWindow from "./ToolsWindow";
+import { useSelector, useDispatch } from "react-redux";
+import { setTools } from "../redux";
 
-const ApplicationsWindow = ({ item }) => {
+const ApplicationsWindow = ({ item, index }) => {
+  const dispatch = useDispatch();
   const allApplications = useSelector((state) => state.applications);
-  console.log(
-    "🚀 ~ file: ApplicationsWindow.js ~ line 8 ~ ApplicationsWindow ~ allApplications",
-    allApplications
-  );
+  // const allTools = useSelector((state) => state.tools);
   const [isActive, setIsActive] = useState(false);
-  const [tools, setTools] = useState(false);
+  // const [showTools, setShowTools] = useState(false);
+  // const [uniqueTools, setUniqueTools] = useState([]);
+
+  useEffect(() => {
+    filterTools();
+  }, []);
+
+  const filterTools = (i) => {
+    const newTools = allApplications
+      ?.map((a) => a.application.map((a) => a.tools))
+      .flat()
+      .flat()
+      .filter((item) => item.toolName === i);
+    // setUniqueTools(newTools);
+    dispatch(setTools(newTools));
+    // setShowTools(true);
+  };
+  const helloTools = item.tools.map((item) => {
+    return item.toolName;
+  });
   return (
     <div>
       <div className="acc_title">
@@ -18,23 +35,24 @@ const ApplicationsWindow = ({ item }) => {
           <div className="acc_icon">
             {isActive ? <IoIosArrowDown /> : <IoIosArrowForward />}
           </div>
-          <p>{item.name}</p>
+          <p key={index}>{item.name}</p>
         </div>
       </div>
       <div className="acc_list">
         {isActive && (
-          <p>
-            {item.tools.map((item) => (
-              <div className="tools">
-                <a onClick={() => setTools(true)} href="#">
-                  {item}
+          <a href="#">
+            {helloTools.map((a, i) => (
+              <div>
+                <a key={i} onClick={() => filterTools(a)}>
+                  {a}
                 </a>
+                <br />
               </div>
             ))}
-          </p>
+          </a>
         )}
       </div>
-      <ToolsWindow tools={tools} />
+      {/* {showTools && uniqueTools.map((item) => <p>{item.toolsList}</p>)} */}
     </div>
   );
 };

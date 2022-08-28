@@ -152,20 +152,20 @@ a {
   color: rgb(19, 33, 184);
 }
 .acc {
-  position: absolute;
+  /* position: absolute;
   top: 390px;
-  left: 250px;
+  left: 250px; */
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
   height: 400px;
   width: 300px;
-  padding-left: 30px;
+  padding: 20px 0 0 30px;
   /* overflow: auto; */
   /* overflow: -moz-scrollbars-none; */
   /* border: 1px solid rgb(19, 33, 184); */
-  border-radius: 20px;
+  /* border-radius: 20px; */
   box-shadow: inset 0px 2px 8px 2px rgb(236, 236, 236),
     inset 0px -11px 8px -10px rgb(236, 236, 236);
 }
@@ -179,23 +179,22 @@ a {
   align-items: flex-start;
   margin-top: 10px;
   width: 90px;
-  /* border: solid 1px red; */
 }
 .acc_name {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  /* margin-top: 20px; */
+  cursor: pointer;
+
   width: 90px;
-  /* border: solid 1px red; */
 }
 .tools {
   margin-left: 40px;
-  /* margin-top: 5px; */
 }
 .acc_icon {
   color: rgb(19, 33, 184);
   margin: 3px 0 0 0px;
+  cursor: pointer;
 }
 .toolsWindow {
   position: absolute;
@@ -206,7 +205,7 @@ a {
 .toolsWindow {
   height: 400px;
   width: 850px;
-  border-radius: 20px;
+  /* border-radius: 20px; */
   box-shadow: inset 0px 1px 8px 1px rgb(236, 236, 236),
     inset 0px -11px 8px -10px rgb(236, 236, 236);
   display: flex;
@@ -222,4 +221,24 @@ a {
   font-size: 50px;
   text-transform: capitalize;
   color: rgb(112, 112, 112);
+}
+.acc_btn {
+  background: rgb(24, 31, 164);
+  font-size: 15px;
+  padding-top: 3px;
+  height: 20px;
+  width: 21px;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  margin: 0 0 0 -20px;
+  position: absolute;
+  color: rgb(115, 255, 40);
+}
+.acc_ipt {
+  width: 240px;
+  height: 21px;
+  outline: none;
+  border: solid 1px grey;
+  padding-left: 10px;
 }

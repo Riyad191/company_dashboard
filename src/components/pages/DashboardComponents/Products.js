@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setApplications } from "../redux";
-import ApplicationsWindow from "./ApplicationsWindow";
+// import { RiRefreshLine } from "react-icons/ri";
+// import ApplicationsWindow from "./ApplicationsWindow";
 import ProductsInputSearch from "./ProductsInputSearch";
 
 const Products = ({ show }) => {
   const dispatch = useDispatch();
   const allProducts = useSelector((state) => state.products);
-  const applications = useSelector((state) => state.applications);
-  const [showApplication, setShowApplication] = useState(false);
+  // const allApplications = useSelector((state) => state.applications);
+  // const [showApplication, setShowApplication] = useState(false);
   const [search, setSearch] = useState("");
 
   const filterApplicatoins = (i) => {
@@ -17,12 +18,13 @@ const Products = ({ show }) => {
       .flat()
       .filter((item) => item.name === i);
     dispatch(setApplications(newApplications));
-    setShowApplication(true);
+    // setShowApplication(true);
   };
 
   const product = allProducts.map((item) =>
     item.product.map((item) => item.name)
   );
+
   const filtered = product
     .flat()
     .filter((item) => item.toLowerCase().indexOf(search.toLowerCase()) !== -1);
@@ -42,16 +44,29 @@ const Products = ({ show }) => {
           );
         })}
       </div>
-      {applications.map(
+
+      {/* {allApplications.map(
         (item) =>
           showApplication && (
             <div className="acc">
+              <div className="acc_form">
+                <input
+                  className="acc_ipt"
+                  type="text"
+                  placeholder="search"
+                  name=""
+                  id=""
+                />
+                <button className="acc_btn">
+                  <RiRefreshLine />
+                </button>
+              </div>
               {item.applications.map((item) => (
                 <ApplicationsWindow item={item} show={show} />
               ))}
             </div>
           )
-      )}
+      )} */}
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../App.css";
+import Logo from "../images/walmart-logo.png";
 import { FaTh, FaBars, FaRegChartBar } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 
@@ -13,16 +14,17 @@ const Sidebar = ({ children }) => {
       icon: <FaTh />,
     },
 
-    // {
-    //   path: "/analytics",
-    //   name: "Analytics",
-    //   icon: <FaRegChartBar />,
-    // },
+    {
+      path: "/analytics",
+      name: "Analytics",
+      icon: <FaRegChartBar />,
+    },
   ];
   return (
     <div className="container">
       <div style={{ width: isOpen ? "200px" : "50px" }} className="sidebar">
         <div className="top_section">
+          <img src={Logo} alt="walmart logo" height={80} />
           <h1
             style={{ display: isOpen ? "block" : "none" }}
             className="logo"

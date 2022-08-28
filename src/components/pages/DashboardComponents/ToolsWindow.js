@@ -1,13 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 
-const ToolsWindow = ({ tools }) => {
-  return (
-    tools && (
-      <div className="toolsWindow">
-        <h1 className="toolInfo">tool informartion</h1>
-      </div>
-    )
-  );
+const ToolsWindow = ({ item }) => {
+  return <div className="toolsWindow"></div>;
 };
 
 export default ToolsWindow;

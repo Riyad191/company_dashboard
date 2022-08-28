@@ -26,11 +26,9 @@ export function setTools(tools) {
 }
 
 const INIT_STATE = {
-  // path: ["fulfillment", "fc system"],
   products: [],
   applications: [],
   tools: [],
-  // data: data,
 };
 
 function stacks(state = INIT_STATE, action) {
