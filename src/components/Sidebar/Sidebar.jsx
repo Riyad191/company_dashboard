@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "../../App.css";
 import Logo from "../../images/walmart-logo.png";
-import { FaTh, FaBars, FaRegChartBar } from "react-icons/fa";
+import { FaTh, FaBars } from "react-icons/fa";
+import { BsSearch } from "react-icons/bs";
 import { NavLink } from "react-router-dom";
 
 const Sidebar = ({ children }) => {
@@ -15,8 +16,8 @@ const Sidebar = ({ children }) => {
     },
     {
       path: "/analytics",
-      name: "Analytics",
-      icon: <FaRegChartBar />,
+      name: "Search",
+      icon: <BsSearch />,
     },
   ];
   return (
