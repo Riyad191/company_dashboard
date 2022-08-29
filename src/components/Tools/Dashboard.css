@@ -1,50 +1,61 @@
-.dashboard {
-  height: 95%;
-  background: rgb(255, 255, 255);
-  color: rgb(95, 95, 95);
-  margin-top: 20px;
-  padding: 0 30px;
+.dashboard_page {
+  height: 100%;
 }
-.top {
-  height: 40%;
-  background: rgb(255, 255, 255);
+.pillars_products_window {
+  height: 50%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  padding: 0 20px;
+  /* border: solid red 1px; */
 }
-.bottom {
-  height: 60%;
-  background: rgb(255, 255, 255);
+.applications_tools_window {
+  height: 50%;
+  /* border: solid rgb(0, 0, 255) 1px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+}
+.pillars_products-counter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 50%;
 }
 .pillar {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 30%;
+  width: 60%;
   height: 100%;
 }
 .pillarName {
   width: 100%;
   flex: 1;
-}
-.btn {
-  outline: none;
-  border: none;
-  border-bottom: 1px solid rgb(225, 225, 225);
-  background: rgb(255, 255, 255);
+  height: 15%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
+  border-bottom: 1px solid rgb(255, 255, 255);
+}
+.btn {
+  outline: none;
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
   font-size: 16px;
   width: 100%;
   height: 100%;
   -webkit-animation-direction: 0.6s;
   transition-duration: 0.6s;
-  color: rgb(95, 95, 95);
   cursor: pointer;
+  color: rgb(95, 95, 95);
 }
 .btn:hover .arrow_icon {
   font-size: 24px;
@@ -65,7 +76,7 @@
   width: 45%;
   height: 100%;
   padding: 15px 20px 20px 20px;
-  border-bottom: 1px solid rgb(225, 225, 225);
+  border-bottom: 1px solid #fff;
 }
 #products {
   display: flex;
@@ -75,13 +86,15 @@
   height: 100%;
 }
 
-.products_list {
-  height: 88%;
+.products_section {
+  height: 100%;
   width: 100%;
-  box-shadow: inset 0px 2px 8px 2px rgb(236, 236, 236),
-    inset 0px -11px 8px -10px rgb(236, 236, 236);
-  padding: 15px 0 0 15px;
+  /* box-shadow: inset 0px 2px 8px 2px rgb(236, 236, 236),
+    inset 0px -11px 8px -10px rgb(236, 236, 236); */
+  border: #fff solid 1px;
+  padding: 15px;
   overflow: auto;
+  border-radius: 20px;
 }
 form {
   height: 10%;
@@ -94,7 +107,7 @@ form {
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  width: 20%;
+  width: 30%;
   height: 100%;
 }
 .products_counter_list {
@@ -106,7 +119,7 @@ form {
   height: 100%;
 }
 .products_counter {
-  border-bottom: 1px solid rgb(225, 225, 225);
+  border-bottom: 1px solid #fff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -118,25 +131,29 @@ form {
   font-size: 14px;
   height: 30px;
   padding: 3px;
-  margin-bottom: 15px;
   padding-left: 10px;
   border: none;
   width: 100%;
-  border: 1px solid rgb(225, 225, 225);
+  border: 1px solid #fff;
+  background: rgb(218, 218, 218);
+  border-radius: 5px;
 }
 .products_refresh_btn {
   background: rgb(24, 31, 164);
-  font-size: 21px;
-  padding-top: 3px;
+  background: none;
+  font-size: 19px;
+  padding-top: 4px;
   height: 29px;
   width: 30px;
   outline: none;
   cursor: pointer;
   border: none;
+
   margin: 0 0 0 -30px;
   position: absolute;
-  top: 78px;
+  top: 97px;
   color: rgb(115, 255, 40);
+  color: blue;
 }
 ::-webkit-scrollbar {
   width: 2px;
@@ -149,26 +166,41 @@ form {
   background: rgb(23, 34, 157);
   border-radius: 10px;
 }
-a {
+.products_list {
+  margin-top: 15px;
+}
+.product_name {
   color: rgb(19, 33, 184);
+  /* border: solid red 1px; */
+  margin: 2px 0 0 10px;
+  height: 20px;
+  font-size: 14px;
+}
+.accordion {
+  height: 87%;
+  width: 29%;
 }
 .acc {
   /* position: absolute;
   top: 390px;
   left: 250px; */
+  border-radius: 20px;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-  height: 400px;
-  width: 300px;
-  padding: 20px 0 0 30px;
+  /* border: solid yellow 1px; */
+  height: 100%;
+  width: 100%;
+  padding: 18px;
+
   /* overflow: auto; */
   /* overflow: -moz-scrollbars-none; */
   /* border: 1px solid rgb(19, 33, 184); */
   /* border-radius: 20px; */
-  box-shadow: inset 0px 2px 8px 2px rgb(236, 236, 236),
-    inset 0px -11px 8px -10px rgb(236, 236, 236);
+  /* box-shadow: inset 0px 2px 8px 2px rgb(236, 236, 236),
+    inset 0px -11px 8px -10px rgb(236, 236, 236); */
+  border: #fff solid 1px;
 }
 .acc::-webkit-scrollbar {
   width: 0 !important;
@@ -176,47 +208,48 @@ a {
 
 .acc_title {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-top: 10px;
-  width: 90px;
+  justify-content: flex-start;
+  /* align-items: flex-start; */
+  margin-top: 2px;
+  width: 100%;
+  /* border: 1px solid rebeccapurple; */
 }
 .acc_name {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: flex-start;
   cursor: pointer;
-
-  width: 90px;
+  width: 100%;
 }
 .tools {
   margin-left: 40px;
 }
 .acc_icon {
   color: rgb(19, 33, 184);
-  margin: 3px 0 0 0px;
+  margin: 2px 4px 0 0px;
   cursor: pointer;
 }
+.acc_list {
+  padding-left: 30px;
+}
 .toolsWindow {
-  /* position: absolute;
-  top: 1px;
-  left: 350px; */
   z-index: 1;
 }
 .toolsWindow {
-  height: 400px;
-  width: 850px;
-  /* border-radius: 20px; */
-  box-shadow: inset 0px 1px 8px 1px rgb(236, 236, 236),
-    inset 0px -11px 8px -10px rgb(236, 236, 236);
+  height: 87%;
+  width: 66%;
+  border-radius: 20px;
+  /* box-shadow: inset 0px 1px 8px 1px rgb(236, 236, 236),
+    inset 0px -11px 8px -10px rgb(236, 236, 236); */
+  border: #fff solid 1px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: repeating-linear-gradient(
+  /* background-image: repeating-linear-gradient(
     rgb(255, 255, 255),
     rgb(243, 243, 243) 10%,
     rgb(236, 236, 236) 20%
-  );
+  ); */
 }
 .toolInfo {
   font-size: 50px;
@@ -224,25 +257,37 @@ a {
   color: rgb(112, 112, 112);
 }
 .acc_btn {
-  background: rgb(24, 31, 164);
-  font-size: 15px;
-  padding-top: 3px;
+  /* background: rgb(24, 31, 164); */
+  background: none;
+  font-size: 17px;
+  padding-top: 4px;
   height: 20px;
   width: 21px;
   outline: none;
   cursor: pointer;
   border: none;
-  margin: 0 0 0 -20px;
+  margin: 2px 0 0 -25px;
   position: absolute;
   color: rgb(115, 255, 40);
+  color: blue;
+  font-weight: bold;
 }
 .acc_ipt {
-  width: 240px;
-  height: 21px;
+  width: 100%;
+  height: 29px;
   outline: none;
-  border: solid 1px grey;
+  border: none;
+  background: rgb(218, 218, 218);
+  border: 1px solid #fff;
+  border-radius: 5px;
   padding-left: 10px;
+  margin-bottom: 10px;
+}
+.acc_form {
+  /* border: solid green; */
+  width: 100%;
 }
 a {
   cursor: pointer;
+  color: rgb(19, 33, 184);
 }

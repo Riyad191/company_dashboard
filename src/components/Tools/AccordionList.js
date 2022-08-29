@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 const AccordionList = () => {
   const allApplications = useSelector((state) => state.applications);
   return (
-    <div>
+    <div className="accordion">
       {allApplications.map((item, index) => (
         <div key={index} className="acc">
           <div className="acc_form">

@@ -1,10 +1,11 @@
 import React from "react";
-import Pillars from "../Tools/Pillars";
+import Pillars from "./Pillars";
 import "./Dashboard.css";
+// import bgLogo from "../../images/background1.png";
 
 const Dashboard = () => {
   return (
-    <main className="dashboard">
+    <main className="dashboardd">
       <Pillars />
     </main>
   );

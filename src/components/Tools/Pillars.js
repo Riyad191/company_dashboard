@@ -25,29 +25,36 @@ const Pillars = () => {
   };
 
   return (
-    <section className="top">
-      <div className="pillar">
-        {pillars.map((category, index) => {
-          return (
-            <PillarsNames
-              key={index}
-              filterProducts={() => filterProducts(category)}
-              pillar={category}
-            />
-          );
-        })}
+    <div className="dashboard_page">
+      <div className="pillars_products_window">
+        <div className="pillars_products-counter">
+          <div className="pillar">
+            {pillars.map((category, index) => {
+              return (
+                <PillarsNames
+                  key={index}
+                  filterProducts={() => filterProducts(category)}
+                  pillar={category}
+                />
+              );
+            })}
+          </div>
+
+          <div className="products_counter_items">
+            <ProductsCounter />
+          </div>
+        </div>
+        {show && (
+          <div className="products">
+            <Products show={show} />
+          </div>
+        )}
       </div>
-      <div className="products_counter_items">
-        <ProductsCounter />
-      </div>
-      <div className="products">
-        <Products show={show} />
-      </div>
-      <div>
+      <div className="applications_tools_window">
         <AccordionList />
+        {showTools && <Tools />}
       </div>
-      <div style={{ border: "red solid 1px" }}>{showTools && <Tools />}</div>
-    </section>
+    </div>
   );
 };
 

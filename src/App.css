@@ -4,64 +4,97 @@
   text-decoration: none;
   box-sizing: border-box;
 }
+.dashboard_header_footer {
+  background: rgb(23, 27, 72);
+  height: 100%;
+  padding: 20px 30px 20px 20px;
+  width: 100%;
+  /* border: solid rgb(238, 156, 93) 4px; */
+}
+
 .dashboard_title {
-  color: rgb(122, 209, 211);
-  font-size: 20px;
+  /* color: rgb(251, 153, 153); */
+  color: rgb(251, 153, 153);
+  font-size: 18px;
   font-weight: inherit;
+  height: 5%;
+}
+.dashboard {
+  height: 88%;
+  color: rgb(95, 95, 95);
+  /* border: solid rgb(255, 99, 99) 5px; */
+  background-color: rgb(218, 218, 218);
+  border-radius: 20px;
+  border: 6px solid rgb(251, 153, 153);
+}
+.dashboardd {
+  height: 100%;
+}
+.footer {
+  color: rgb(251, 153, 153);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: solid rgb(255, 99, 99) 5px; */
+  height: 9%;
+}
+.footer_text {
+  margin: 7px 0 0 5px;
+  font-size: 20px;
+}
+.logo {
+  font-size: 30px;
 }
 .container {
   display: flex;
-  background: rgb(23, 27, 72);
-  /* background: rgb(129, 137, 224); */
+  background: rgb(6, 8, 21);
   height: 100vh;
 }
 .OSCS {
   font-size: 20px;
   font-weight: bold;
-}
-main {
-  width: 100%;
-  padding: 20px;
+  color: rgb(45, 223, 158);
+  /* color: rgb(251, 153, 153);
+  color: rgb(218, 218, 218); */
 }
 img {
   margin-top: 10px;
 }
 .sidebar {
   background: rgb(23, 27, 72);
-  color: #fff;
+  /* background: rgb(228, 215, 199); */
+  color: rgb(251, 153, 153);
   height: 100vh;
   width: 200px;
   transition: all 0.5s;
+  /* border: solid rgb(251, 153, 153) 4px; */
 }
 .top_section {
   display: flex;
   align-items: center;
   padding: 20px 15px;
 }
-.logo {
-  font-size: 30px;
-}
+
 .bars {
   display: flex;
   font-size: 25px;
   margin-left: 50px;
+  cursor: pointer;
 }
 .link {
   display: flex;
-  color: #fff;
+  color: rgb(251, 153, 153);
   padding: 10px 15px;
   gap: 15px;
   transition: all 0.5s;
 }
 .link:hover {
-  /* background: rgb(122, 211, 153); */
-  background: rgb(122, 209, 211);
+  background: rgb(251, 153, 153);
   color: #000;
   transition: all 0.5s;
 }
 .active {
-  background: rgb(122, 209, 211);
-  /* background: rgb(122, 211, 153); */
+  background: rgb(251, 153, 153);
   color: #000;
 }
 .icon,

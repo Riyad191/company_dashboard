@@ -5,7 +5,7 @@ import { FaTh, FaBars, FaRegChartBar } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 
 const Sidebar = ({ children }) => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
   const menuItem = [
     {
@@ -13,7 +13,6 @@ const Sidebar = ({ children }) => {
       name: "Tools",
       icon: <FaTh />,
     },
-
     {
       path: "/analytics",
       name: "Analytics",
@@ -22,19 +21,22 @@ const Sidebar = ({ children }) => {
   ];
   return (
     <div className="container">
-      <div style={{ width: isOpen ? "200px" : "50px" }} className="sidebar">
+      <div style={{ width: isOpen ? "200px" : "60px" }} className="sidebar">
         <div className="top_section">
-          <img src={Logo} alt="walmart logo" height={80} />
-          <h1
-            style={{ display: isOpen ? "block" : "none" }}
-            className="logo"
-          ></h1>
+          <h1 style={{ display: isOpen ? "block" : "none" }} className="logo">
+            <img src={Logo} alt="walmart logo" height={80} />
+          </h1>
           <div style={{ marginLeft: isOpen ? "50px" : "0px" }} className="bars">
             <FaBars onClick={toggle} />
           </div>
         </div>
         {menuItem.map((item, index) => (
-          <NavLink to={item.path} key={index} className="link">
+          <NavLink
+            to={item.path}
+            key={index}
+            className="link"
+            activeclassName="active"
+          >
             <div className="icon">{item.icon}</div>
             <div
               style={{ display: isOpen ? "block" : "none" }}
@@ -45,12 +47,15 @@ const Sidebar = ({ children }) => {
           </NavLink>
         ))}
       </div>
-      <main>
+      <main className="dashboard_header_footer">
         <p className="dashboard_title">
-          {" "}
-          <span className="OSCS">OSCS</span> Omni Supply Chain System
+          <span className="OSCS">OSCS</span> Omni Supply Chain System{" "}
         </p>
-        {children}
+        <div className="dashboard">{children}</div>
+        <div className="footer">
+          <img src={Logo} alt="walmart logo" height={40} />
+          <p className="footer_text">footer</p>
+        </div>
       </main>
     </div>
   );

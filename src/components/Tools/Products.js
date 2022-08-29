@@ -30,18 +30,21 @@ const Products = ({ show }) => {
 
   return (
     <main id="products">
-      <ProductsInputSearch search={search} setSearch={setSearch} />
-      <div className="products_list">
-        {filtered.map((name, index) => {
-          return (
-            show && (
-              <a onClick={() => filterApplicatoins(name)} key={index}>
-                {name}
-                <br />
-              </a>
-            )
-          );
-        })}
+      <div className="products_section">
+        <ProductsInputSearch search={search} setSearch={setSearch} />
+        <div className="products_list">
+          {filtered.map((name, index) => {
+            return (
+              show && (
+                <div className="product_name">
+                  <a onClick={() => filterApplicatoins(name)} key={index}>
+                    {name}
+                  </a>
+                </div>
+              )
+            );
+          })}
+        </div>
       </div>
     </main>
   );
