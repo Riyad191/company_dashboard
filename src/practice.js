@@ -26,7 +26,7 @@ export default function FreeSolo() {
           id="free-solo-demo"
           freeSolo
           options={uniquePillarName}
-          renderInput={(params) => <TextField {...params} label="freeSolo" />}
+          renderInput={(params) => <TextField {...params} label="pillar" />}
           onChange={(e, newValue) => setPillar(newValue)}
         />
       </Stack>
@@ -34,8 +34,8 @@ export default function FreeSolo() {
         <Autocomplete
           id="free-solo-demo"
           freeSolo
-          options={items && items.map((option) => option.name)}
-          renderInput={(params) => <TextField {...params} label="freeSolo" />}
+          options={items ? items.map((option) => option.name) : ""}
+          renderInput={(params) => <TextField {...params} label="product" />}
           onChange={(e, newValue) => setProduct(newValue)}
         />
       </Stack>
@@ -115,4 +115,98 @@ const data = [
       },
     ],
   },
+  {
+    pillar: "support1",
+    product: [
+      {
+        name: "Sufadsfadsfasd ",
+        applications: [
+          { name: "application1", tools: ["tool1", "tool2", "tool3"] },
+          { name: "application2", tools: ["tool1", "tool2", "tool3"] },
+          { name: "application33", tools: ["tool1", "tool2", "tool3"] },
+          { name: "application", tools: ["tool1", "tool2", "tool3"] },
+          { name: "application", tools: ["tool1", "tool2", "tool3"] },
+          { name: "application", tools: ["tool1", "tool2", "tool3"] },
+          { name: "application", tools: ["tool1", "tool2", "tool3"] },
+          {
+            name: "application",
+            tools: [{ tool1: [1, 2, 3] }, "tool2", "tool3"],
+          },
+          {
+            name: "application",
+            tools: [{ tool1: [1, 2, 3] }, "tool2", "tool3"],
+          },
+          {
+            name: "application",
+            tools: [{ tool1: [1, 2, 3] }, "tool2", "tool3"],
+          },
+        ],
+      },
+
+      {
+        name: "OARfadsfadfafas ",
+        applications: [
+          { name: "application", tools: ["tool1", "tool2", "tool3"] },
+          { name: "application", tools: ["tool1", "tool2", "tool3"] },
+          { name: "application44", tools: ["tool1", "tool2", "tool3"] },
+          { name: "application", tools: ["tool1", "tool2", "tool3"] },
+          { name: "application", tools: ["tool1", "tool2", "tool3"] },
+          { name: "application", tools: ["tool1", "tool2", "tool3"] },
+          { name: "application", tools: ["tool1", "tool2", "tool3"] },
+          { name: "application", tools: ["tool1", "tool2", "tool3"] },
+          { name: "application", tools: ["tool1", "tool2", "tool3"] },
+        ],
+      },
+      {
+        name: "Supply Chain fdsfagafgafadsfasSupport Engineering ",
+        applications: [
+          { name: "application", tools: ["tool1", "tool2", "tool3"] },
+          { name: "application", tools: ["tool1", "tool2", "tool3"] },
+          { name: "application55", tools: ["tool1", "tool2", "tool3"] },
+          { name: "application", tools: ["tool1", "tool2", "tool3"] },
+          { name: "application", tools: ["tool1", "tool2", "tool3"] },
+          { name: "application", tools: ["tool1", "tool2", "tool3"] },
+          { name: "application", tools: ["tool1", "tool2", "tool3"] },
+          { name: "application", tools: ["tool1", "tool2", "tool3"] },
+        ],
+      },
+      {
+        name: "Operational Data Sgfgadafasfadfadtore (ODS) ",
+        applications: [
+          { name: "application", tools: ["tool1", "tool2", "tool3"] },
+          { name: "application", tools: ["tool1", "tool2", "tool3"] },
+          { name: "application66", tools: ["tool1", "tool2", "tool3"] },
+          { name: "application", tools: ["tool1", "tool2", "tool3"] },
+          { name: "application", tools: ["tool1", "tool2", "tool3"] },
+          { name: "application", tools: ["tool1", "tool2", "tool3"] },
+          { name: "application", tools: ["tool1", "tool2", "tool3"] },
+          { name: "application", tools: ["tool1", "tool2", "tool3"] },
+        ],
+      },
+    ],
+  },
 ];
+
+// <input type="text" onChange={(e) => setSearch(e.target.value)} />
+// {arr
+//   .filter((item) => {
+//     return search.toLowerCase() === ""
+//       ? item
+//       : item.name.toLowerCase().includes(search) ||
+//           item.email.toLowerCase().includes(search) ||
+
+//   })
+//   .map((item) => {
+//     return (
+//       <div>
+//         <p>{item.name}</p>
+//         <p>{item.email}</p>
+//         <p>
+//           {item.phone.map((a) => {
+//             return (
+//               <div>
+//                 <h4>{a.number1}</h4>
+//                 {/* <h4>{a.number2}</h4> */}
+//               </div>
+//             );
+//           })}

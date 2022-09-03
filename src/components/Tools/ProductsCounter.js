@@ -1,15 +1,11 @@
 import React, { useState } from "react";
 import data from "../../data";
 const ProductsCounter = () => {
-  const [countProducts, setCountProducts] = useState(data);
   return (
     <main className="products_counter_list">
-      {countProducts
+      {data
         .map((item) => {
-          return item.product;
-        })
-        .map((item) => {
-          return item.length;
+          return item.product.length;
         })
         .map((item, index) => (
           <p className="products_counter" key={index}>

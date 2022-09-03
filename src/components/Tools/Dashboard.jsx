@@ -1,6 +1,6 @@
 import React from "react";
 import Pillars from "./Pillars";
-import "./Dashboard.css";
+import "./Tools.css";
 // import bgLogo from "../../images/background1.png";
 
 const Dashboard = () => {

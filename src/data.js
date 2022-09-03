@@ -238,7 +238,7 @@ export default [
         ],
       },
       {
-        name: "Employees",
+        name: " Engineering",
         application: [
           {
             name: "application",
@@ -2141,25 +2141,42 @@ export default [
 
 // =================
 
-//   pillar: "Support",
-//   product: [
-//     {
-//       name: "Supply Chain Operations Tool (GSCOPE)",
-//       applications: [
-//         {
-//           name: "application",
-//           tools: [{ nameOfTool: "tool", toolData: ["tool information"] }],
-//         },
-//         {
-//           name: "application",
-//           tools: [{ nameOfTool: "tool", toolData: ["tool information"] }],
-//         },
-//         {
-//           name: "application",
-//           tools: [{ nameOfTool: "tool", toolData: ["tool information"] }],
-//         },
-//       ],
-//     },
-//   ],
-// },
-// {
+const arrr = [
+  {
+    pillar: "Technology",
+    products: [
+      {
+        productName: "social media",
+        applications: [
+          {
+            applicationName: "Facebook",
+            tools: [
+              {
+                toolName: "daily story",
+                toolInfo: [{ a: "friends" }, { b: "anyone" }],
+              },
+            ],
+          },
+          {
+            name: "Snapchat",
+            tools: [
+              {
+                toolName: "daily story",
+                toolInfo: [{ a: "friends" }, { b: "anyone" }],
+              },
+            ],
+          },
+          {
+            name: "WhatsApp",
+            tools: [
+              {
+                toolName: "daily story",
+                toolInfo: [{ a: "friends" }, { b: "anyone" }],
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+];

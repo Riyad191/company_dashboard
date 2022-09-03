@@ -9,17 +9,22 @@ const Products = ({ show }) => {
   const showAccordion = useSelector((state) => state.showAccordion);
 
   const [search, setSearch] = useState("");
-
+  console.log(allProducts);
   const filterApplicatoins = (i) => {
     const newApplications = allProducts
       ?.map((item) => item.product)
       .flat()
       .filter((item) => item.name === i);
     dispatch(setApplications(newApplications));
+    console.log("newApps:", newApplications);
     // dispatch(setShowAccordion(false));
   };
 
-  console.log("showAcc", showAccordion);
+  console.log(
+    "aaaa",
+    allProducts.map((a) => a)
+  );
+
   const product = allProducts.map((item) =>
     item.product.map((item) => item.name)
   );
