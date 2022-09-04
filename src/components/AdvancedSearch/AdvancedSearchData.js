@@ -5,16 +5,13 @@ import OpenRow from "./OpenRow.js";
 const AdvancedSearchData = ({ search, search1, search2 }) => {
   return (
     <div id="table">
+      <div className="table_header">
+        <div>Pillar</div>
+        <div>Product</div>
+        <div>Application</div>
+        <div>Tool</div>
+      </div>
       <div className="advanced_search_table">
-        {/* <thead>
-      <tr>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Email</th>
-        <th>Phone</th>
-      </tr>
-    </thead> */}
-
         {data
           .filter((a) => {
             return (
@@ -33,17 +30,7 @@ const AdvancedSearchData = ({ search, search1, search2 }) => {
             return a.phone.indexOf(`${search2}`) !== -1;
           })
           .map((item, index) => (
-            <div
-              // style={{ height: isOpen ? "200px" : "60px" }}
-              className="table_row"
-              key={index}
-            >
-              <td>{item.first_name}</td>
-              <td>{item.last_name}</td>
-              <td>{item.email}</td>
-              <td>{item.phone}</td>
-              <OpenRow phone={item.phone} />
-            </div>
+            <OpenRow key={index} item={item} />
           ))}
       </div>
     </div>

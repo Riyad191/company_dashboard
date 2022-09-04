@@ -7,7 +7,17 @@ const ToolsWindow = () => {
     <div className="toolsWindow">
       <div>
         {allTools.map((item, index) => (
-          <p key={index}>{item.toolsList}</p>
+          <p key={index}>
+            {item.toolInfo.map((a) => {
+              return (
+                <div>
+                  <h1>{a.a}</h1>
+                  <h1>{a.b}</h1>
+                  <h1>{a.c}</h1>
+                </div>
+              );
+            })}
+          </p>
         ))}
       </div>
     </div>

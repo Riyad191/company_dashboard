@@ -5,7 +5,7 @@ const ProductsCounter = () => {
     <main className="products_counter_list">
       {data
         .map((item) => {
-          return item.product.length;
+          return item.products.length;
         })
         .map((item, index) => (
           <p className="products_counter" key={index}>

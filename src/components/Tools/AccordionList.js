@@ -19,7 +19,7 @@ const AccordionList = () => {
               <RiRefreshLine />
             </button>
           </div>
-          {item.application.map((item, index) => (
+          {item.applications.map((item, index) => (
             <Applications key={index} item={item} />
           ))}
         </div>

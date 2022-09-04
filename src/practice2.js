@@ -1,310 +1,356 @@
-// import React from "react";
+import React from "react";
 
-// const App = () => {
-//   return (
-//     <div className="card">
-//       {arr.map((item) => {
-//         const { pillar, products } = item;
-//         return (
-//           <div>
-//             <h1>pillar:</h1> <p>{pillar}</p>
-//             <p>
-//               {products.map((item) => {
-//                 return (
-//                   <div>
-//                     <h1>product:</h1> <p>{item.productName}</p>
-//                     <p>
-//                       {item.applications.map((item) => {
-//                         return (
-//                           <div>
-//                             <h1>application</h1> <p>{item.applicationName}</p>
-//                             <p>
-//                               {item.tools.map((item) => {
-//                                 return (
-//                                   <div>
-//                                     <h1>tool</h1> <p>{item.toolName}</p>
-//                                     <p>
-//                                       {item.toolInfo.map((item) => {
-//                                         return (
-//                                           <div>
-//                                             <p>{item.a}</p>
-//                                             <p>{item.b}</p>
-//                                             <p>{item.c}</p>
-//                                             <hr />
-//                                           </div>
-//                                         );
-//                                       })}
-//                                     </p>
-//                                   </div>
-//                                 );
-//                               })}
-//                             </p>
-//                           </div>
-//                         );
-//                       })}
-//                     </p>
-//                   </div>
-//                 );
-//               })}
-//             </p>
-//           </div>
-//         );
-//       })}
-//     </div>
-//   );
-// };
+function App() {
+  // console.log(arr[0].products);
+  // let tabledata = [];
+  // let tabledata2 = [];
+  // arr[0].products.map((item) => {
+  //   tabledata.push(item);
+  // });
+  // console.log(tabledata);
 
-// const arr = [
-//   {
-//     pillar: "Technology",
-//     products: [
-//       {
-//         productName: "social media",
-//         applications: [
-//           {
-//             applicationName: "Facebook",
-//             tools: [
-//               {
-//                 toolName: "daily story",
-//                 toolInfo: [{ a: "friends" }, { b: "anyone" }],
-//               },
-//             ],
-//           },
-//           {
-//             applicationName: "Snapchat",
-//             tools: [
-//               {
-//                 toolName: "daily story",
-//                 toolInfo: [{ a: "friends" }, { b: "anyone" }],
-//               },
-//             ],
-//           },
-//           {
-//             applicationName: "WhatsApp",
-//             tools: [
-//               {
-//                 toolName: "daily story",
-//                 toolInfo: [{ a: "friends" }, { b: "anyone" }],
-//               },
-//             ],
-//           },
-//         ],
-//       },
-//       {
-//         productName: "social media",
-//         applications: [
-//           {
-//             applicationName: "Facebook",
-//             tools: [
-//               {
-//                 toolName: "daily story",
-//                 toolInfo: [{ a: "friends" }, { b: "anyone" }],
-//               },
-//             ],
-//           },
-//           {
-//             applicationName: "Snapchat",
-//             tools: [
-//               {
-//                 toolName: "daily story",
-//                 toolInfo: [{ a: "friends" }, { b: "anyone" }],
-//               },
-//             ],
-//           },
-//           {
-//             applicationName: "WhatsApp",
-//             tools: [
-//               {
-//                 toolName: "daily story",
-//                 toolInfo: [{ a: "friends" }, { b: "anyone" }],
-//               },
-//             ],
-//           },
-//         ],
-//       },
-//       {
-//         productName: "social media",
-//         applications: [
-//           {
-//             applicationName: "Facebook",
-//             tools: [
-//               {
-//                 toolName: "daily story",
-//                 toolInfo: [{ a: "friends" }, { b: "anyone" }],
-//               },
-//             ],
-//           },
-//           {
-//             applicationName: "Snapchat",
-//             tools: [
-//               {
-//                 toolName: "daily story",
-//                 toolInfo: [{ a: "friends" }, { b: "anyone" }],
-//               },
-//             ],
-//           },
-//           {
-//             applicationName: "WhatsApp",
-//             tools: [
-//               {
-//                 toolName: "daily story",
-//                 toolInfo: [{ a: "friends" }, { b: "anyone" }],
-//               },
-//             ],
-//           },
-//         ],
-//       },
-//     ],
-//   },
-// ];
+  // tabledata.map((item3) => {
+  //   tabledata2.push(item3.applications);
+  // });
 
-// export default App;
+  // var merged = [].concat.apply([], tabledata2);
 
-// import React from "react";
-// export default App = () => {
-//   return (
-//     <div className="card">
-//       {arr.map((item) => (
-//         <main
-//           style={{
-//             display: "flex",
-//             justifyContent: "space-",
-//             textAlign: "center",
-//           }}
-//         >
-//           <section>
-//             {" "}
-//             <h1>Pillar</h1>
-//             <p>{item.pillar}</p>
-//           </section>
-//           <section>
-//             <h1>Product</h1>{" "}
-//             {item.products.map((item) => (
-//               <p> {item.productName}</p>
-//             ))}
-//           </section>
-//           <section>
-//             <h1>Applications</h1>{" "}
-//             {item.products.map((item) => (
-//               <div>
-//                 {item.applications.map((item) => (
-//                   <p>{item.applicationName}</p>
-//                 ))}
-//               </div>
-//             ))}
-//           </section>
-//           <section>
-//             <h1>Tool</h1>{" "}
-//             {item.products.map((item) => (
-//               <div>
-//                 {item.applications.map((item) => (
-//                   <div>
-//                     {item.tools.map((item) => (
-//                       <p>{item.toolName}</p>
-//                     ))}
-//                   </div>
-//                 ))}
-//               </div>
-//             ))}
-//           </section>
-//           <section>
-//             <h1>Tools Informations</h1>{" "}
-//             {item.products.map((item) => (
-//               <div>
-//                 {item.applications.map((item) => (
-//                   <div>
-//                     {item.tools.map((item) => (
-//                       <div>
-//                         {item.toolInfo.map((item) => (
-//                           <div>
-//                             <p>{item.a}</p> <p>{item.b}</p>
-//                           </div>
-//                         ))}
-//                       </div>
-//                     ))}
-//                   </div>
-//                 ))}
-//               </div>
-//             ))}
-//           </section>
-//         </main>
-//       ))}
-//     </div>
-//   );
-// };
+  // console.log(merged);
+
+  console.log(arr);
+
+  return (
+    <div className="App">
+      <h2>table</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <td>Pillar</td>
+            <td>Product</td>
+            <td>Application</td>
+            <td>Tools</td>
+            <td>tool Info</td>
+          </tr>
+        </thead>
+        <tbody>
+          {arr.map((item) => {
+            // console.log(item, "item1");
+            return item.products.map((item2) => {
+              // console.log(item2, "item2");
+              return item2.applications.map((item3) => {
+                // console.log(item3, "item3");
+                return item3.tools.map((item4) => {
+                  // console.log(item4, "item4");
+                  return item4.toolInfo.map((item5) => {
+                    console.log(item5, "item5");
+                    return (
+                      <tr>
+                        <td>{item.pillar}</td>
+                        <td>{item2.productName}</td>
+                        <td>{item3.applicationName}</td>
+                        <td>{item4.toolName}</td>
+                        <td>{item5.a || item5.b || item5.c}</td>
+                      </tr>
+                    );
+                  });
+                });
+              });
+            });
+          })}
+        </tbody>
+      </table>
+    </div>
+  );
+}
 
 const arr = [
   {
-    pillar: "Technology",
+    pillar: "technology111",
     products: [
       {
         productName: "social media",
         applications: [
           {
-            applicationName: "Facebook",
+            applicationName: "facebook",
             tools: [
               {
-                toolName: "daily story",
-                toolInfo: [{ a: "Facebook friends" }, { b: "Facebook anyone" }],
+                toolName: "facebook daily story",
+                toolInfo: [{ a: "facebook friends" }, { b: "facebook family" }],
+              },
+              {
+                toolName: "facebook direct messages",
+                toolInfo: [
+                  { a: "facebook every one" },
+                  { b: "facebook close friends" },
+                ],
               },
             ],
           },
           {
-            applicationName: "Snapchat",
+            applicationName: "snapchat",
             tools: [
               {
-                toolName: "daily story",
-                toolInfo: [{ a: "Snapchat friends" }, { b: "Snapchat anyone" }],
+                toolName: "snapchat daily story",
+                toolInfo: [{ a: "sanpchat friends" }, { b: "sanpchat family" }],
               },
-            ],
-          },
-          {
-            applicationName: "WhatsApp",
-            tools: [
               {
-                toolName: "daily story",
-                toolInfo: [{ a: "WhatsApp friends" }, { b: "WhatsApp anyone" }],
+                toolName: "snapchat direct messages",
+                toolInfo: [
+                  { a: "sanpchat every one" },
+                  { b: "sanpchat close friends" },
+                  { c: "ccccccccccccccccc" },
+                ],
               },
             ],
           },
         ],
       },
       {
-        productName: "social media2",
+        productName: "cell phones",
         applications: [
           {
-            applicationName: "Facebook2",
+            applicationName: "iphone",
             tools: [
               {
-                toolName: "Facebookone daily story2",
+                toolName: "iphone 12",
+                toolInfo: [{ a: "iphone 12 plus" }, { b: "iphone 12 max" }],
+              },
+              {
+                toolName: "iphone 13",
+                toolInfo: [{ a: "iphone 13 plus" }, { b: "iphone 13 max" }],
+              },
+            ],
+          },
+          {
+            applicationName: "samsung",
+            tools: [
+              {
+                toolName: "galaxy ultra",
+                toolInfo: [{ a: "ultra 21" }, { b: "ultra 22" }],
+              },
+              {
+                toolName: "galaxy note",
+                toolInfo: [{ a: "note 10" }, { b: "note 20" }],
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    pillar: "technology222",
+    products: [
+      {
+        productName: "social media",
+        applications: [
+          {
+            applicationName: "facebook",
+            tools: [
+              {
+                toolName: "facebook daily story",
+                toolInfo: [{ a: "facebook friends" }, { b: "facebook family" }],
+              },
+              {
+                toolName: "facebook direct messages",
                 toolInfo: [
-                  { a: "Facebookone friends2" },
-                  { b: "Facebookone anyone2" },
+                  { a: "facebook every one" },
+                  { b: "facebook close friends" },
                 ],
               },
             ],
           },
           {
-            applicationName: "Snapchat2",
+            applicationName: "snapchat",
             tools: [
               {
-                toolName: "Snapchatone daily story2",
+                toolName: "snapchat daily story",
+                toolInfo: [{ a: "sanpchat friends" }, { b: "sanpchat family" }],
+              },
+              {
+                toolName: "snapchat direct messages",
                 toolInfo: [
-                  { a: "Snapchatone friends2" },
-                  { b: "Snapchatone anyone2" },
+                  { a: "sanpchat every one" },
+                  { b: "sanpchat close friends" },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+      {
+        productName: "cell phones",
+        applications: [
+          {
+            applicationName: "iphone",
+            tools: [
+              {
+                toolName: "iphone 12",
+                toolInfo: [{ a: "iphone 12 plus" }, { b: "iphone 12 max" }],
+              },
+              {
+                toolName: "iphone 13",
+                toolInfo: [{ a: "iphone 13 plus" }, { b: "iphone 13 max" }],
+              },
+            ],
+          },
+          {
+            applicationName: "samsung",
+            tools: [
+              {
+                toolName: "galaxy ultra",
+                toolInfo: [{ a: "ultra 21" }, { b: "ultra 22" }],
+              },
+              {
+                toolName: "galaxy note",
+                toolInfo: [{ a: "note 10" }, { b: "note 20" }],
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    pillar: "technology333",
+    products: [
+      {
+        productName: "social media",
+        applications: [
+          {
+            applicationName: "facebook",
+            tools: [
+              {
+                toolName: "facebook daily story",
+                toolInfo: [{ a: "facebook friends" }, { b: "facebook family" }],
+              },
+              {
+                toolName: "facebook direct messages",
+                toolInfo: [
+                  { a: "facebook every one" },
+                  { b: "facebook close friends" },
                 ],
               },
             ],
           },
           {
-            applicationName: "WhatsApp2",
+            applicationName: "snapchat",
             tools: [
               {
-                toolName: "WhatsApp aily story2",
+                toolName: "snapchat daily story",
+                toolInfo: [{ a: "sanpchat friends" }, { b: "sanpchat family" }],
+              },
+              {
+                toolName: "snapchat direct messages",
                 toolInfo: [
-                  { a: "WhatsApp riends2" },
-                  { b: "WhatsApp anyone2" },
+                  { a: "sanpchat every one" },
+                  { b: "sanpchat close friends" },
                 ],
+              },
+            ],
+          },
+        ],
+      },
+      {
+        productName: "cell phones",
+        applications: [
+          {
+            applicationName: "iphone",
+            tools: [
+              {
+                toolName: "iphone 12",
+                toolInfo: [{ a: "iphone 12 plus" }, { b: "iphone 12 max" }],
+              },
+              {
+                toolName: "iphone 13",
+                toolInfo: [{ a: "iphone 13 plus" }, { b: "iphone 13 max" }],
+              },
+            ],
+          },
+          {
+            applicationName: "samsung",
+            tools: [
+              {
+                toolName: "galaxy ultra",
+                toolInfo: [{ a: "ultra 21" }, { b: "ultra 22" }],
+              },
+              {
+                toolName: "galaxy note",
+                toolInfo: [{ a: "note 10" }, { b: "333" }],
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    pillar: "cars",
+    products: [
+      {
+        productName: "american cars",
+        applications: [
+          {
+            applicationName: "tesla",
+            tools: [
+              {
+                toolName: "tesla exterior",
+                toolInfo: [
+                  { a: "tesla exterior red" },
+                  { b: "tesla exterior white" },
+                ],
+              },
+              {
+                toolName: "tesla interior",
+                toolInfo: [
+                  { a: "tesla interior material" },
+                  { b: "tesla interior leather" },
+                ],
+              },
+            ],
+          },
+          {
+            applicationName: "ford",
+            tools: [
+              {
+                toolName: "fusion",
+                toolInfo: [{ a: "fusion gas" }, { b: "fusion hybrid" }],
+              },
+              {
+                toolName: "focus",
+                toolInfo: [{ a: "focus gas" }, { b: "focus hybrid" }],
+              },
+            ],
+          },
+        ],
+      },
+      {
+        productName: "japanese cars",
+        applications: [
+          {
+            applicationName: "toyota",
+            tools: [
+              {
+                toolName: "camary",
+                toolInfo: [{ a: "camary gas" }, { b: "camary hybrid" }],
+              },
+              {
+                toolName: "corolla",
+                toolInfo: [{ a: "corolla gas" }, { b: "corolla hybrid" }],
+              },
+            ],
+          },
+          {
+            applicationName: "honda",
+            tools: [
+              {
+                toolName: "accord",
+                toolInfo: [{ a: "accord white" }, { b: "accord black" }],
+              },
+              {
+                toolName: "civic",
+                toolInfo: [{ a: "civic white" }, { b: "civic black" }],
               },
             ],
           },
@@ -313,3 +359,46 @@ const arr = [
     ],
   },
 ];
+
+export default App;
+
+{
+  /* <tbody>
+{arr[0].products.map((eachproduct)=>{
+ return eachproduct.applications.map((item)=>{
+    console.log(item);
+    return <tr>
+    <td>{arr[0].pillar}</td>
+    <td>{eachproduct.productName}</td>
+    <td>{item.applicationName || item.name}</td>
+    <td>{item.tools[0].toolName}</td>
+  </tr>
+  })
+})}
+</tbody> */
+}
+
+// {arr.map((item) => {
+//   // console.log(item);
+//   {
+//     item.products.map((item2) => {
+//       // console.log(item2);
+//       {
+//         item2.applications.map((item3) => {
+//           // console.log(item3);
+//           {
+//             item3.tools.map((item4) => {
+//               // console.log(item4);
+//               {
+//                 item4.toolInfo.map((item5) => {
+//                   console.log(item5);
+
+//                 });
+//               }
+//             });
+//           }
+//         });
+//       }
+//     });
+//   }
+// })}

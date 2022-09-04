@@ -12,12 +12,12 @@ const Products = ({ show }) => {
   console.log(allProducts);
   const filterApplicatoins = (i) => {
     const newApplications = allProducts
-      ?.map((item) => item.product)
+      ?.map((item) => item.products)
       .flat()
-      .filter((item) => item.name === i);
+      .filter((item) => item.productName === i);
     dispatch(setApplications(newApplications));
     console.log("newApps:", newApplications);
-    // dispatch(setShowAccordion(false));
+    dispatch(setShowAccordion(false));
   };
 
   console.log(
@@ -26,7 +26,7 @@ const Products = ({ show }) => {
   );
 
   const product = allProducts.map((item) =>
-    item.product.map((item) => item.name)
+    item.products.map((item) => item.productName)
   );
 
   const filtered = product
