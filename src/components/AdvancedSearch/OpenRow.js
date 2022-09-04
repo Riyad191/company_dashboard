@@ -12,14 +12,23 @@ const OpenRow = ({ item }) => {
             <IoIosArrowForward onClick={() => setIsOpen(!isOpen)} />
           )}
         </div>
-        <p style={{ marginLeft: -50 }} className="advanced_search_table_item">
+        <p style={{ marginLeft: -47 }} className="advanced_search_table_item">
           {item.first_name}
         </p>{" "}
-        <p className="advanced_search_table_item">{item.last_name}</p>
-        <p className="advanced_search_table_item">{item.last_name}</p>
-        <p className="advanced_search_table_item">{item.email}</p>
+        <p style={{ marginLeft: -15 }} className="advanced_search_table_item">
+          {item.last_name}
+        </p>
+        <p style={{ marginRight: -6 }} className="advanced_search_table_item">
+          {item.phone}
+        </p>
+        <p className="advanced_search_table_item">
+          {" "}
+          <a href="#">{item.email}</a>{" "}
+        </p>
       </table>
-      {isOpen && <p className="advanced_seatch_tool-info"> {item.phone}</p>}
+      {isOpen && (
+        <h1 className="advanced_seatch_tool-info"> Tool Information </h1>
+      )}
     </div>
   );
 };
