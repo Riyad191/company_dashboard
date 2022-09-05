@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <select
+      onmousedown="if(this.options.length>5){this.size=5;}"
+      onchange="this.blur()"
+      onblur="this.size=0;"
+    >
+      <option>option1</option>
+      <option>option2</option>
+      <option>option3</option>
+      <option>option4</option>
+      <option>option5</option>
+      <option>option6</option>
+      <option>option7</option>
+    </select>
+  </body>
+</html>
