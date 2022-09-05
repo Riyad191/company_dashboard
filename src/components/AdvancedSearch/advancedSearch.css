@@ -138,6 +138,11 @@
 .input_title_icon1,
 .input_title_icon2 {
   /* margin: 4px 0 0 12px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: blue;
   cursor: pointer;
+  /* border: blue solid 1px;
+  border-radius: 4px; */
 }
