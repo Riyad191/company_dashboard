@@ -62,7 +62,7 @@ function App() {
   const [isOpen1, setIsOpen1] = useState(false);
   const [isOpen2, setIsOpen2] = useState(false);
 
-  const u = [...new Set(data.map((a) => a.email))];
+  const u = [...new Set(data.map((a) => a.first_name))];
 
   return (
     <div className="home">
@@ -90,7 +90,6 @@ function App() {
               <TextField
                 id="outlined-basic"
                 size="small"
-                // label="Outlined"
                 placeholder="Keyword"
                 variant="outlined"
                 className={classes.textfield}
@@ -119,7 +118,6 @@ function App() {
                 renderInput={(params) => (
                   <TextField
                     {...params}
-                    // label="Pillar"
                     placeholder="Pillar"
                     className={classes.textfield}
                   />
@@ -147,12 +145,11 @@ function App() {
           <div className="search2">
             <Stack sx={{ width: 180 }}>
               <Autocomplete
-                options={data.map((a) => a.phone)}
+                options={data.map((a) => a.last_name)}
                 size="small"
                 renderInput={(params) => (
                   <TextField
                     {...params}
-                    // label="phone"
                     placeholder="Product"
                     className={classes.textfield}
                   />

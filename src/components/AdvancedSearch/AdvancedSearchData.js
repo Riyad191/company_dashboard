@@ -66,10 +66,10 @@ const AdvancedSearchData = ({ search, search1, search2 }) => {
             );
           })
           .filter((a) => {
-            return a.email.indexOf(`${search1}`) !== -1;
+            return a.first_name.indexOf(`${search1}`) !== -1;
           })
           .filter((a) => {
-            return a.phone.indexOf(`${search2}`) !== -1;
+            return a.last_name.indexOf(`${search2}`) !== -1;
           })
           .map((item, index) => (
             <OpenRow key={index} item={item} />

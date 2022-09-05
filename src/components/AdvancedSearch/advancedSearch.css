@@ -21,7 +21,7 @@
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  padding-top: 30px;
+  padding-top: 37px;
   /* border: red solid 1px; */
   height: 100%;
   width: 25%;
@@ -125,7 +125,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 40px;
+  height: 35px;
   width: 200px;
   background-color: #fff;
   border: rgb(231, 231, 231) 1px solid;
